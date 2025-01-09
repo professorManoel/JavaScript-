@@ -22,8 +22,8 @@ class CalcController {
 
        setDisplayTime(){
        
-        this.displayDate = this.currentDate.toLocaleDateString( this._locale,{day:"2-digit",month:"long",year:"numeric"});
-        this.displayTime = this.currentDate.toLocaleTimeString( this._locale);
+        this.displayDate = new Date().toLocaleDateString( this._locale,{day:"2-digit",month:"long",year:"numeric"});
+        this.displayTime = new Date().toLocaleTimeString( this._locale);
        };
             
         
@@ -47,29 +47,11 @@ class CalcController {
 
 
 
-    // Encapsulamento
-    get displayCalc(){
+    
+  
 
-        return this._displayCalcEl.innerHTML;
-    }
 
-    set displayCalc(valor){
-
-        this._displayCalcEl.innerHTML = valor;
-
-    }
-
-    get currentDate(){
-
-        return new Date();
-
-    }
-
-    set currentDate(valor){
-
-        this._currentDate = valor;
-
-    }
+    
 
  
 
